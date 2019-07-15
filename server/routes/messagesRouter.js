@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 const dbRoute = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox-wrjir.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(dbRoute,{dbName: 'messageList'})
+mongoose.connect(process.env.MONGODB_URI||dbRoute,{dbName: 'messageList'})
 
 var messageSchema = new mongoose.Schema(
     {

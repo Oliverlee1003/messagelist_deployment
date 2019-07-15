@@ -12,6 +12,8 @@ var messagesRouter = require('./routes/messagesRouter');
 
 
 var app = express();
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,5 +47,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 
 module.exports = app;
