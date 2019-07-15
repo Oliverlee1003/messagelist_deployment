@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.inputText {
+  margin:10px auto;
+  width: 800px;
+  color: blue;
+  padding: 20px 12px 10px 20px;
+  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.messageButton {
+  color: #444444;
+  /* background: #F3F3F3; */
+  /* border: 1px #DADADA solid; */
+  /* padding: 10px 20px; */
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  /* outline: none; */
+}
+
+.AddNewMessageButton {
+  color: #444444;
+  background: #F3F3F3;
+  border: 1px #DADADA solid;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  outline: none;
+}
+
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+  margin: 1.5em;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
