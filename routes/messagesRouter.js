@@ -3,9 +3,10 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-const dbRoute = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox-wrjir.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(process.env.MONGODB_URI||dbRoute,{dbName: 'messageList'})
+// const dbRoute = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox-wrjir.mongodb.net/test?retryWrites=true&w=majority';
+
+// mongoose.connect(process.env.MONGODB_URI||dbRoute,{dbName: 'messageList'})
 
 var messageSchema = new mongoose.Schema(
     {
