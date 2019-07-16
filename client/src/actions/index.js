@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actions'
 
 // const messageAPI = 'http://localhost:9000/messages';
-const messageAPi = '/messages'
+const messageAPI = '/messages'
 
 export const showDetail = message => ({
     type: actionTypes.SHOW_DETAIL,
