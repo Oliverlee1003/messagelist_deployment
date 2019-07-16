@@ -15,7 +15,9 @@ var messagesRouter = require("./routes/messagesRouter");
 var app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-const dbRoute = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox-wrjir.mongodb.net/test?retryWrites=true&w=majority';
+//const dbRoute = 'mongodb://heroku_r7jcb7j8:24gsr9lk3ajf1rnmb9h5ksainq@ds145456.mlab.com:45456/heroku_r7jcb7j8'
+ const dbRoute = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox-wrjir.mongodb.net/test?retryWrites=true&w=majority';
+// const uri = "mongodb+srv://"+process.env.MONGO_USER+":"+process.env.MONGO_PW+"@sandbox-ocgqf.mongodb.net/test?retryWrites=true&w=majority";
 
 // connects our back end code with the database
 mongoose.connect(process.env.MONGODB_URI||dbRoute,{dbName: 'messageList'})
@@ -65,6 +67,10 @@ app.use(function(err, req, res, next) {
 app.get('/', (req, res) => {
   res.json({ message: 'Hello world' })
 })
+
+app.listen(process.env.PORT || 9000, function() {
+  console.log('Express server is up and running!');
+});
 module.exports = app;
 
 
