@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 // const uri = "mongodb+srv://"+process.env.MONGO_USER+":"+process.env.MONGO_PW+"@sandbox-ocgqf.mongodb.net/test?retryWrites=true&w=majority";
 
 // connects our back end code with the database
-mongoose.connect(process.env.MONGODB_URI||dbRoute,{dbName: 'messageList'})
+mongoose.connect(process.env.MONGODB_URI||dbRoute)
 
 let db = mongoose.connection;
 
